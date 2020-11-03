@@ -87,13 +87,11 @@ fn test_verbose() {
 }
 
 #[test]
-#[ignore]
 fn test_spams_newline() {
     new_ucmd!().pipe_in("a").succeeds().stdout_is("a\n");
 }
 
 #[test]
-#[ignore]
 fn test_unsupported_byte_syntax() {
     new_ucmd!()
         .args(&["-1c"])
@@ -105,7 +103,6 @@ fn test_unsupported_byte_syntax() {
 }
 
 #[test]
-#[ignore]
 fn test_unsupported_line_syntax() {
     new_ucmd!()
         .args(&["-n", "2048m"])
@@ -117,7 +114,6 @@ fn test_unsupported_line_syntax() {
 }
 
 #[test]
-#[ignore]
 fn test_unsupported_zero_terminated_syntax() {
     new_ucmd!()
         .args(&["-z -n 1"])
@@ -128,7 +124,6 @@ fn test_unsupported_zero_terminated_syntax() {
 }
 
 #[test]
-#[ignore]
 fn test_unsupported_zero_terminated_syntax_2() {
     new_ucmd!()
         .args(&["-z -n 2"])
@@ -139,7 +134,6 @@ fn test_unsupported_zero_terminated_syntax_2() {
 }
 
 #[test]
-#[ignore]
 fn test_unsupported_negative_byte_syntax() {
     new_ucmd!()
         .args(&["--bytes=-2"])
@@ -150,7 +144,6 @@ fn test_unsupported_negative_byte_syntax() {
 }
 
 #[test]
-#[ignore]
 fn test_bug_in_negative_zero_lines() {
     new_ucmd!()
         .args(&["--lines=-0"])
